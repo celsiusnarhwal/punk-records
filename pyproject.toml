@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "road-poneglyph"
+version = "0.1.0"
+description = ""
+authors = ["celsius narhwal <hello@celsiusnarhwal.dev>"]
+readme = "README.md"
+packages = [{include = "road_poneglyph"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+yarl = "^1.9.2"
+path = "^16.7.1"
+
+
+[tool.poetry.scripts]
+scrape = "road_poneglyph.scraper:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
