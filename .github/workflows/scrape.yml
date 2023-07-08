@@ -24,7 +24,7 @@ jobs:
 
       - name: Set Up Poetry
         run: curl -sSL https://install.python-poetry.org | python -
-        with:
+        env:
           POETRY_VERSION: 1.5.1
 
       - name: Install Dependencies
