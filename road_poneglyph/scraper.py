@@ -1,4 +1,6 @@
 import json
+import os
+import subprocess
 from re import compile
 
 import requests
@@ -99,4 +101,16 @@ for chapter in get_chapter_list():
 
             print(f"Got page {page_number}/{num_pages}")
 
-    print(f"Finished Chapter {number}: \"{title}\"")
+    print(f'Finished Chapter {number}: "{title}"')
+
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        cmds = [
+            "git config --global user.name github-actions[bot]",
+            "git config --global user.email github-actions[bot]@users.noreply.github.com",
+            "git add .",
+            f"git commit -m 'Update chapter {number}'",
+            "git push",
+        ]
+
+        for cmd in cmds:
+            subprocess.run(cmd, shell=True)
