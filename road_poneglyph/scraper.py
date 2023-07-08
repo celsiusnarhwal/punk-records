@@ -13,7 +13,7 @@ CHAPTER_NUMBER = compile(r"[\d.]+")
 
 
 def request(url):
-    resp = requests.get(url)
+    resp = requests.get(url, verify=False)
     resp.raise_for_status()
     return resp
 
