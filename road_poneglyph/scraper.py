@@ -85,21 +85,21 @@ for chapter in get_chapter_list():
 
         with open(filename, "wb") as img:
             img.write(response.content)
-            cubari = json.load(CUBARI_JSON.open())
-            cubari["chapters"] = cubari.get("chapters", {})
-
-            cubari["chapters"][number] = {
-                "title": title,
-                "groups": {
-                    "TCB Scans": [
-                        get_raw_url(filename) for filename in chapter_dir.listdir()
-                    ]
-                },
-            }
-
-            json.dump(cubari, CUBARI_JSON.open("w"), indent=4)
-
             print(f"Got page {page_number}/{num_pages}")
+
+        cubari = json.load(CUBARI_JSON.open())
+        cubari["chapters"] = cubari.get("chapters", {})
+
+        cubari["chapters"][number] = {
+            "title": title,
+            "groups": {
+                "TCB Scans": [
+                    get_raw_url(filename) for filename in sorted(chapter_dir.listdir())
+                ]
+            },
+        }
+
+        json.dump(cubari, CUBARI_JSON.open("w"), indent=4)
 
     print(f'Finished Chapter {number}: "{title}"')
 
