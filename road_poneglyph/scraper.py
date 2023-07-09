@@ -7,11 +7,13 @@ import requests
 from bs4 import BeautifulSoup
 from path import Path
 from yarl import URL
+from datetime import datetime
 
 BASE_URL = URL("https://tcbscans.com")
 CUBARI_JSON = Path("cubari.json")
 CHAPTERS_DIR = Path("chapters")
 CHAPTER_NUMBER = compile(r"[\d.]+")
+HERE = Path(__file__).parent
 
 
 def request(url):
@@ -35,15 +37,15 @@ def get_raw_url(fp: Path):
 
 
 if not CUBARI_JSON.exists():
-    base_info = {
+    metadata = {
         "title": "One Piece",
-        "description": Path("description.txt").read_text(),
+        "description": (HERE / "description.txt").read_text(),
         "artist": "Eiichiro Oda",
         "author": "Eiichiro Oda",
         "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     }
 
-    json.dump(base_info, CUBARI_JSON.open("w"), indent=4)
+    json.dump(metadata, CUBARI_JSON.open("w"), indent=4)
 
 for chapter in get_chapter_list():
     number = CHAPTER_NUMBER.search(chapter.text).group()
@@ -92,6 +94,7 @@ for chapter in get_chapter_list():
 
         cubari["chapters"][number] = {
             "title": title,
+            "last_updated": int(datetime.utcnow().timestamp()),
             "groups": {
                 "TCB Scans": [
                     get_raw_url(filename)
