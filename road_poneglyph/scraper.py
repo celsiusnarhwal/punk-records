@@ -94,7 +94,10 @@ for chapter in get_chapter_list():
             "title": title,
             "groups": {
                 "TCB Scans": [
-                    get_raw_url(filename) for filename in sorted(chapter_dir.listdir())
+                    get_raw_url(filename)
+                    for filename in sorted(
+                        chapter_dir.listdir(), key=lambda fp: int(fp.stem)
+                    )
                 ]
             },
         }
