@@ -20,7 +20,10 @@ jobs:
           token: ${{ github.token }}
 
       - name: Create Update Branch
-        run: git branch -f update/${{ github.sha }} && git checkout update/${{ github.sha }}
+        run: |
+          git branch -f update/${{ github.sha }} 
+          git checkout update/${{ github.sha }}
+          git branch --set-upstream-to=origin/update/${{ github.sha }}
 
       - name: Set Up Python
         uses: actions/setup-python@v4
