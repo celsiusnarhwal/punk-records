@@ -10,8 +10,8 @@ permissions:
   contents: write
 
 jobs:
-  scrape:
-    name: Scrape
+  update:
+    name: Update
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
