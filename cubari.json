@@ -1,0 +1,35 @@
+{
+    "title": "One Piece",
+    "description": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins.\n\nTwenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.\n\n[Repository managed by [celsiusnarhwal](https://github.com/celsiusnarhwal/punk-records).]",
+    "artist": "Eiichiro Oda",
+    "author": "Eiichiro Oda",
+    "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+    "chapters": {
+        "1086": {
+            "title": "The Five Elder Planets",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_000.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_012.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_013.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_014.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_015.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1086n_016.png"
+                ]
+            },
+            "last_updated": 1689191406
+        }
+    }
+}
