@@ -61,6 +61,7 @@ def start():
 
                 for cmd in cmds:
                     subprocess.run(cmd, shell=True, check=True)
+
         else:
             print(
                 f"No changes to Chapter {number}: {title}"
