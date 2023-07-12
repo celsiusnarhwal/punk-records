@@ -13,7 +13,7 @@ from labosphere.constants import BASE_METADATA, BASE_URL, CUBARI_JSON
 
 def request(url) -> Response:
     ua = UserAgent()
-    resp = requests.get(url, headers={"User-Agent": ua.random})
+    resp = requests.get(url, headers={"User-Agent": ua.chrome})
     resp.raise_for_status()
     return resp
 
