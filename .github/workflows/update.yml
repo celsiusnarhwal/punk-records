@@ -1,8 +1,8 @@
-name: Scrape Chapters
+name: Update Repository
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "*/15 * * * *"
 
   workflow_dispatch:
 
@@ -25,21 +25,10 @@ jobs:
           python-version: 3.11
 
       - name: Set Up Poetry
-        run: curl -sSL https://install.python-poetry.org | python -
-        env:
-          POETRY_VERSION: 1.5.1
+        run: curl -sSL https://install.python-poetry.org | python - --version=$(cat .poetry-version)
 
       - name: Install Dependencies
         run: poetry install --only main
 
       - name: Run Scraper
-        run: poetry run scrape
-
-      - name: Commit and Push Changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Run scraper"
-          git push
-
+        run: poetry run labosphere start
