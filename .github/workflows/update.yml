@@ -23,6 +23,7 @@ jobs:
         run: |
           git branch -f update/${{ github.sha }} 
           git checkout update/${{ github.sha }}
+          git push -u origin update/${{ github.sha }}
           git branch --set-upstream-to=origin/update/${{ github.sha }}
 
       - name: Set Up Python
