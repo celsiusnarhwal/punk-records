@@ -20,7 +20,7 @@ jobs:
           token: ${{ github.token }}
 
       - name: Create Update Branch
-        run: git branch -f update/${{ github.sha }}
+        run: git branch -f update/${{ github.sha }} && git checkout update/${{ github.sha }}
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -37,6 +37,6 @@ jobs:
         run: poetry run labosphere start
 
       - name: Merge Update Branch
-        run: gh pr merge --squash --delete-branch --auto --merge "${{ github.sha }}"
+        run: gh pr merge --squash --delete-branch --auto --merge update/${{ github.sha }}
         env:
           GH_TOKEN: ${{ github.token }}
