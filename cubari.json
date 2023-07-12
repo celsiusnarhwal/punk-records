@@ -20911,6 +20911,32 @@
                 ]
             },
             "last_updated": 1689200573
+        },
+        "300": {
+            "title": "",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_01.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_02.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_03.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_04.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_05.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_06.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_07.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_08.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_09.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_10.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_11.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_12.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_13.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_14.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_15.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_16.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_17.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_300_18.jpg"
+                ]
+            },
+            "last_updated": 1689200577
         }
     }
 }
