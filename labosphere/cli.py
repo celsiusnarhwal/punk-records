@@ -70,7 +70,7 @@ def start():
                 else f"No changes to Chapter {number}"
             )
         
-        if os.getenv("GITHUB_ACTIONS") == true:
+        if os.getenv("GITHUB_ACTIONS") == "true":
             time.sleep(3)
 
     if os.getenv("DOCKER"):
