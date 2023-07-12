@@ -44,9 +44,3 @@ def dump_cubari(data: dict):
 
 def deep_get(obj, key, default=None, **kwargs):
     return base_deep_get(obj, key, **kwargs) or default
-
-
-def hash_cubari():
-    h = hashlib.sha256(CUBARI_JSON.read_bytes()).hexdigest()
-    print(h)
-    return h
