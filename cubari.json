@@ -8312,6 +8312,27 @@
                 ]
             },
             "last_updated": 1689198441
+        },
+        "768": {
+            "title": "",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_01.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_02.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_03.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_04.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_05.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_06.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_07.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_08.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_09.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_10.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_11.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_12.jpg",
+                    "https://cdn.onepiecechapters.com/file/opctcb/onepiece/onepiecechapters_768_13.jpg"
+                ]
+            },
+            "last_updated": 1689198445
         }
     }
 }
