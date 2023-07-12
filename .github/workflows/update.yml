@@ -33,7 +33,7 @@ jobs:
       - name: Install Dependencies
         run: poetry install --only main
 
-      - name: Run Scraper
+      - name: Run Labosphere
         run: poetry run labosphere start
 
       - name: Merge Update Branch
