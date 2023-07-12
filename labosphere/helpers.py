@@ -5,13 +5,15 @@ from collections import OrderedDict
 import requests
 from bs4 import BeautifulSoup, ResultSet
 from dict_deep import deep_get as base_deep_get
+from fake_useragent import UserAgent
 from requests import Response
 
 from labosphere.constants import BASE_METADATA, BASE_URL, CUBARI_JSON
 
 
 def request(url) -> Response:
-    resp = requests.get(url)
+    ua = UserAgent()
+    resp = requests.get(url, headers={"User-Agent": ua.random})
     resp.raise_for_status()
     return resp
 
