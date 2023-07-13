@@ -13,7 +13,7 @@ from labosphere.constants import BASE_METADATA, BASE_URL, CUBARI_JSON
 
 def request(url) -> Response:
     ua = UserAgent()
-    resp = requests.get(url, headers={"User-Agent": ua.random})
+    resp = requests.get(url, headers={"User-Agent": ua.chrome})
     resp.raise_for_status()
     return resp
 
@@ -44,9 +44,3 @@ def dump_cubari(data: dict):
 
 def deep_get(obj, key, default=None, **kwargs):
     return base_deep_get(obj, key, **kwargs) or default
-
-
-def hash_cubari():
-    h = hashlib.sha256(CUBARI_JSON.read_bytes()).hexdigest()
-    print(h)
-    return h

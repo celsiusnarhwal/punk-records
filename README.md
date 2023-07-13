@@ -10,4 +10,4 @@ Contributions to resolve this are welcome.
 
 ## License
 
-This repository's contents are licensed under the [MIT License](LICESNE.md).
+This repository's contents are licensed under the [MIT License](LICENSE.md).
