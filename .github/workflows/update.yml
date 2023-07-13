@@ -33,7 +33,7 @@ jobs:
           import os
           import uuid
 
-          os.environ["BRANCH_UUID"] = uuid.uuid4()
+          os.environ["BRANCH_UUID"] = str(uuid.uuid4())
         shell: python
 
       - name: Create Update Branch
