@@ -33,7 +33,7 @@ jobs:
           import os
           import uuid
 
-          os.environ["BRANCH_UUID"] = str(uuid.uuid4())
+          print(uuid.uuid4(), file=open(os.getenv("GITHUB_ENV")))
         shell: python
 
       - name: Create Update Branch
