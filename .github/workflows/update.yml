@@ -28,20 +28,20 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Get Update Branch UUID
+      - name: Name Update Branch
         run: |
           import os
           import uuid
 
-          print(f"BRANCH_UUID={uuid.uuid4()}", file=open(os.getenv("GITHUB_ENV"), "a"))
+          print(f"UPDATE_BRANCH=update/{uuid.uuid4()}", file=open(os.getenv("GITHUB_ENV"), "a"))
         shell: python
 
       - name: Create Update Branch
         run: |
-          git branch -f update/${{ env.BRANCH_UUID }}
-          git checkout update/${{ env.BRANCH_UUID }}
-          git push -u origin update/${{ env.BRANCH_UUID }}
-          git branch --set-upstream-to=origin/update/${{ env.BRANCH_UUID }}
+          git branch -f ${{ env.UPDATE_BRANCH }}
+          git checkout ${{ env.UPDATE_BRANCH }}
+          git push -u origin ${{ env.UPDATE_BRANCH }}
+          git branch --set-upstream-to=origin/${{ env.UPDATE_BRANCH }}
 
       - name: Set Up Poetry
         run: curl -sSL https://install.python-poetry.org | python - --version=$(cat .poetry-version)
@@ -55,6 +55,6 @@ jobs:
       - name: Merge Update Branch
         run: |
           gh pr create --title "Update repository"
-          gh pr merge --squash --delete-branch --auto update/${{ env.BRANCH_UUID }}
+          gh pr merge --squash --delete-branch --auto ${{ env.UPDATE_BRANCH }}
         env:
           GH_TOKEN: ${{ github.token }}
