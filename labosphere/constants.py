@@ -1,3 +1,4 @@
+import os
 from re import compile
 
 from path import Path
@@ -8,6 +9,8 @@ ROOT = HERE.parent
 BASE_URL = URL("https://tcbscans.com")
 CUBARI_JSON = ROOT / "cubari.json"
 CHAPTER_NUMBER = compile(r"[\d.]+")
+GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
+DOCKER = os.getenv("DOCKER")
 
 BASE_METADATA = {
     "title": "One Piece",

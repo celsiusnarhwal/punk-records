@@ -1,4 +1,3 @@
-import os
 import subprocess
 import time
 from datetime import datetime
@@ -75,9 +74,9 @@ def start():
                 if title
                 else f"No changes to Chapter {number}"
             )
-        
-        if os.getenv("GITHUB_ACTIONS") == "true":
-            time.sleep(3)
+
+        if GITHUB_ACTIONS:
+            time.sleep(1)
 
     if DOCKER:
         mount = Path("/labosphere")

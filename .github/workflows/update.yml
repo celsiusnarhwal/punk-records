@@ -53,6 +53,8 @@ jobs:
         run: poetry run labosphere start
 
       - name: Merge Update Branch
-        run: gh pr merge --squash --delete-branch --auto update/${{ env.BRANCH_UUID }}
+        run: |
+          gh pr create --title "Update repository"
+          gh pr merge --squash --delete-branch --auto update/${{ env.BRANCH_UUID }}
         env:
           GH_TOKEN: ${{ github.token }}
