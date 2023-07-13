@@ -2161,6 +2161,37 @@
                 ]
             },
             "last_updated": 1689243409
+        },
+        "1011": {
+            "title": "Anko Standards",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_00%20Cover.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_00%20Credits.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_00%20Spread.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/01_Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_02%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_03%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_04%20Lvlv3.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_05%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_06%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_07%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/08_Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_09%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/10_Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_11%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_12%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_13%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_14%20Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/15_Lvl.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_16-17%20Lvlv2.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/opv2_1011_18.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_19.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_Page%2020v2.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1011_Page%2021.png"
+                ]
+            },
+            "last_updated": 1689243413
         }
     }
 }
