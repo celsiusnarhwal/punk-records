@@ -1,1 +1,31 @@
-{}
+{
+    "title": "One Piece",
+    "description": "Gol D. Roger, a man referred to as the \"King of the Pirates,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the King of the Pirates is executed and the Great Age of Pirates begins.\n\nTwenty-two years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new King of the Pirates. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.",
+    "artist": "Eiichiro Oda",
+    "author": "Eiichiro Oda",
+    "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+    "chapters": {
+        "1087": {
+            "title": "Battleship Bags",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_012.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_013.png"
+                ]
+            },
+            "last_updated": 1689243082
+        }
+    }
+}
