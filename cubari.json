@@ -2136,6 +2136,31 @@
                 ]
             },
             "last_updated": 1689243405
+        },
+        "1012": {
+            "title": "Itch",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_00.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_02v2.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_03.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_04.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_05.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_06.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_07.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_08v2.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_09.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_10.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_11.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_12.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_13.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_14v2.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1012_15.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/18meme.png"
+                ]
+            },
+            "last_updated": 1689243409
         }
     }
 }
