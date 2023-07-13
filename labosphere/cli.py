@@ -6,7 +6,13 @@ import typer
 from path import Path
 
 from labosphere import callbacks
-from labosphere.constants import BASE_URL, CHAPTER_NUMBER, CUBARI_JSON
+from labosphere.constants import (
+    BASE_URL,
+    CHAPTER_NUMBER,
+    CUBARI_JSON,
+    DOCKER,
+    GITHUB_ACTIONS,
+)
 from labosphere.helpers import dump_cubari, get_chapter_list, get_soup, load_cubari
 
 app = typer.Typer(no_args_is_help=True)
@@ -50,7 +56,7 @@ def start():
                 else f"Updated Chapter {number}"
             )
 
-            if os.getenv("GITHUB_ACTIONS"):
+            if GITHUB_ACTIONS:
                 cmds = [
                     "git config --global user.name github-actions[bot]",
                     "git config --global user.email github-actions[bot]@users.noreply.github.com",
@@ -69,7 +75,7 @@ def start():
                 else f"No changes to Chapter {number}"
             )
 
-    if os.getenv("DOCKER"):
+    if DOCKER:
         mount = Path("/labosphere")
         mount.mkdir_p()
         (mount / "cubari.json").write_text(CUBARI_JSON.read_text())
