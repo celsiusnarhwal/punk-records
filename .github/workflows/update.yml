@@ -2,7 +2,7 @@ name: Update Repository
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 10,22 * * *"
 
   workflow_dispatch:
 
@@ -54,7 +54,7 @@ jobs:
 
       - name: Merge Update Branch
         run: |
-          gh pr create --title "Update repository"
+          gh pr create --title "Update repository" --body ""
           gh pr merge --squash --delete-branch --auto ${{ env.UPDATE_BRANCH }}
         env:
           GH_TOKEN: ${{ github.token }}
