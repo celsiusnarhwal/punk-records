@@ -36,12 +36,14 @@ def load_cubari() -> dict:
 
 
 def dump_cubari(data: dict):
-    data["chapters"] = OrderedDict(sorted(data["chapters"].items()))
     data = OrderedDict(
         sorted(
             data.items(), key=lambda x: [*BASE_METADATA.keys(), "chapters"].index(x[0])
         )
     )
+
+    data["chapters"] = OrderedDict(sorted(data["chapters"].items()))
+
     json.dump(data, CUBARI_JSON.open("w"), indent=4)
 
 
