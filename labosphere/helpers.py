@@ -42,7 +42,7 @@ def dump_cubari(data: dict):
         )
     )
 
-    data["chapters"] = OrderedDict(sorted(data["chapters"].items()))
+    data["chapters"] = OrderedDict(reversed(sorted(data["chapters"].items())))
 
     json.dump(data, CUBARI_JSON.open("w"), indent=4)
 
