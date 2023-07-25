@@ -26663,7 +26663,7 @@
             "groups": {
                 "TCB Scans": [
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_001.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_01v.png",
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_002.png",
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_003.png",
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_004.png",
@@ -26675,10 +26675,11 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_010.png",
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_011.png",
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_012.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_013.png"
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_013.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece1087_014v.png"
                 ]
             },
-            "last_updated": 1689243082
+            "last_updated": 1690309332
         },
         "1086": {
             "title": "The Five Elder Planets",
