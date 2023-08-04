@@ -4,8 +4,6 @@ Labosphere generates [Cubari](https://cubari.moe) repositories for [TCB Scans](h
 It retrieves chapter metadata in reverse sequential order, beginning with the latest chapter and ending with Chapter 1.
 It then uses this metadata to compose a JSON file which can be provided to Cubari as-is.
 
-Labosphere is scheduled to run on this repository at 10:00 and 22:00 UTC every day.
-
 The technically inclined are welcome to run Labosphere themselves:
 
 ```bash
