@@ -1,6 +1,6 @@
 import json
 
-from labosphere.constants import CUBARI_JSON
+from labosphere.helpers import cubari_path
 
-if not CUBARI_JSON.exists():
-    json.dump({}, CUBARI_JSON.open("w"), indent=4)
+if not cubari_path().exists():
+    json.dump({}, cubari_path().open("w"), indent=4)

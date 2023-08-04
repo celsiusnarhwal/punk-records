@@ -1,14 +1,12 @@
 import os
-import re
 
 from path import Path
 from yarl import URL
 
+DEV_MODE = os.getenv("DEV_MODE")
 HERE = Path(__file__).parent
 ROOT = HERE.parent
 BASE_URL = URL("https://tcbscans.com")
-CUBARI_JSON = ROOT / "cubari.json"
-CHAPTER_NUMBER = re.compile(r"[\d.]+")
 GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
 DOCKER = os.getenv("DOCKER")
 

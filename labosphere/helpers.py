@@ -5,9 +5,10 @@ import requests
 from bs4 import BeautifulSoup, ResultSet
 from dict_deep import deep_get as base_deep_get
 from fake_useragent import UserAgent
+from path import Path
 from requests import Response
 
-from labosphere.constants import BASE_METADATA, BASE_URL, CUBARI_JSON
+from labosphere.constants import BASE_METADATA, BASE_URL, DEV_MODE, ROOT
 
 
 def request(url) -> Response:
@@ -27,12 +28,16 @@ def get_chapter_list() -> ResultSet:
     )
 
 
+def cubari_path() -> Path:
+    return ROOT / ("cubari.json" if not DEV_MODE else "test.cubari.json")
+
+
 def load_cubari() -> dict:
-    cubari = json.load(CUBARI_JSON.open())
+    cubari = json.load(cubari_path().open())
     cubari.update(BASE_METADATA)
     dump_cubari(cubari)
 
-    return json.load(CUBARI_JSON.open())
+    return json.load(cubari_path().open())
 
 
 def dump_cubari(data: dict):
@@ -42,9 +47,9 @@ def dump_cubari(data: dict):
         )
     )
 
-    data["chapters"] = OrderedDict(reversed(sorted(data["chapters"].items())))
+    data["chapters"] = OrderedDict(reversed(sorted(data.get("chapters", {}).items())))
 
-    json.dump(data, CUBARI_JSON.open("w"), indent=4)
+    json.dump(data, cubari_path().open("w"), indent=4)
 
 
 def deep_get(obj, key, default=None, **kwargs):

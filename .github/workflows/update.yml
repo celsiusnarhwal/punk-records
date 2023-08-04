@@ -24,6 +24,11 @@ jobs:
         with:
           token: ${{ github.token }}
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Set Up Python
         uses: actions/setup-python@v4
         with:
@@ -52,6 +57,26 @@ jobs:
 
       - name: Run Labosphere
         run: poetry run labosphere start
+
+      - name: Check for Changes
+        uses: tj-actions/changed-files@v37
+        id: changed-files
+        with:
+          files: cubari.json
+
+      - name: Check for Changes (cont.)
+        if: steps.files.outputs.any_changed != "true"
+        run: |
+          gh run cancel ${{ github.run_id }}
+          gh run watch ${{ github.run_id }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "Update cubari.json"
+          git push
 
       - name: Merge Update Branch
         run: |

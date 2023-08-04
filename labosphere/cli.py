@@ -1,4 +1,4 @@
-import subprocess
+import re
 import time
 from datetime import datetime
 
@@ -6,14 +6,15 @@ import typer
 from path import Path
 
 from labosphere import callbacks
-from labosphere.constants import (
-    BASE_URL,
-    CHAPTER_NUMBER,
-    CUBARI_JSON,
-    DOCKER,
-    GITHUB_ACTIONS,
+from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
+from labosphere.helpers import (
+    cubari_path,
+    deep_get,
+    dump_cubari,
+    get_chapter_list,
+    get_soup,
+    load_cubari,
 )
-from labosphere.helpers import dump_cubari, get_chapter_list, get_soup, load_cubari
 
 app = typer.Typer(no_args_is_help=True)
 
@@ -27,7 +28,7 @@ def start():
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})
 
-        number = CHAPTER_NUMBER.search(chapter.text).group()
+        number = re.search(r"[\d.]+", chapter.text).group()
         title = chapter.text.splitlines()[2].strip()
 
         soup = get_soup(BASE_URL / chapter.get("href").lstrip("/"))
@@ -35,7 +36,7 @@ def start():
             "img", src=lambda src: src and "cdn.onepiecechapters.com" in src
         )
 
-        old_metadata = cubari["chapters"].get(number, {})
+        old_metadata = deep_get(cubari, f"chapters.{number}", default={})
         old_metadata.pop("last_updated", None)
 
         new_metadata = {
@@ -56,18 +57,6 @@ def start():
                 else f"Updated Chapter {number}"
             )
 
-            if GITHUB_ACTIONS:
-                cmds = [
-                    "git config --global user.name github-actions[bot]",
-                    "git config --global user.email github-actions[bot]@users.noreply.github.com",
-                    "git add .",
-                    f'git commit -m "Update cubari.json"',
-                    "git push",
-                ]
-
-                for cmd in cmds:
-                    subprocess.run(cmd, shell=True, check=True)
-
         else:
             print(
                 f"No changes to Chapter {number}: {title}"
@@ -81,7 +70,7 @@ def start():
     if DOCKER:
         mount = Path("/labosphere")
         mount.mkdir_p()
-        (mount / "cubari.json").write_text(CUBARI_JSON.read_text())
+        (mount / "cubari.json").write_text(cubari_path().read_text())
         exit()
 
 
