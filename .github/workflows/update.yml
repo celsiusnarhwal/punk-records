@@ -70,7 +70,7 @@ jobs:
         run: |
           git push origin -d ${{ env.UPDATE_BRANCH }}
           gh run cancel ${{ github.run_id }}
-          gh run watch ${{ github.run_id }}
+          gh run watch ${{ github.run_id }} > /dev/null 2>&1
         env:
           GH_TOKEN: ${{ github.token }}
 
