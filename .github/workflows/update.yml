@@ -65,9 +65,10 @@ jobs:
         with:
           files: cubari.json
 
-      - name: Check for Changes (cont.)
+      - name: Exit if No Changes
         if: steps.changed-files.outputs.any_changed != true
         run: |
+          git push origin -d ${{ env.UPDATE_BRANCH }}
           gh run cancel ${{ github.run_id }}
           gh run watch ${{ github.run_id }}
         env:
