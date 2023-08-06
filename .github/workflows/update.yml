@@ -57,7 +57,7 @@ jobs:
         run: poetry install --only main
 
       - name: Run Labosphere
-        run: poetry run labosphere start
+        run: poetry run labosphere start --cooldown 1 --timeout 5
 
       - name: Check for Changes
         uses: tj-actions/changed-files@v37

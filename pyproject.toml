@@ -19,6 +19,7 @@ fake-useragent = "^1.1.3"
 
 [tool.poetry.scripts]
 labosphere = "labosphere.cli:app"
+lbs = "labosphere.cli:app"
 
 [tool.black]
 line-length = 88

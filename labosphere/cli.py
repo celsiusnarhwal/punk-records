@@ -1,4 +1,5 @@
 import re
+import sys
 import time
 from datetime import datetime
 
@@ -6,7 +7,7 @@ import typer
 from path import Path
 
 from labosphere import callbacks
-from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
+from labosphere.constants import BASE_URL, DOCKER
 from labosphere.helpers import (
     cubari_path,
     deep_get,
@@ -20,10 +21,22 @@ app = typer.Typer(no_args_is_help=True)
 
 
 @app.command("start")
-def start():
+def start(
+    cooldown: int = typer.Option(
+        0, help="The number of seconds to wait between sending requests to TCB Scans."
+    ),
+    timeout: int = typer.Option(
+        None,
+        min=1,
+        help="Labosphere will exit after requesting this many consecutive chapters "
+        "with no changes.",
+    ),
+):
     """
     Run Labosphere.
     """
+    timeout_tracker = 0
+
     for chapter in get_chapter_list():
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})
@@ -47,6 +60,7 @@ def start():
         changes = old_metadata != new_metadata
 
         if changes:
+            timeout_tracker = 0
             new_metadata["last_updated"] = int(datetime.utcnow().timestamp())
             cubari["chapters"][number] = new_metadata
             dump_cubari(cubari)
@@ -58,14 +72,19 @@ def start():
             )
 
         else:
+            timeout_tracker += 1
+
             print(
                 f"No changes to Chapter {number}: {title}"
                 if title
                 else f"No changes to Chapter {number}"
             )
 
-        if GITHUB_ACTIONS:
-            time.sleep(1)
+        if timeout and timeout_tracker >= timeout:
+            print(f"Requested {timeout} consecutive chapters with no changes. Exiting.")
+            sys.exit()
+
+        time.sleep(cooldown)
 
     if DOCKER:
         mount = Path("/labosphere")
@@ -79,14 +98,6 @@ def start():
     epilog=f"Labosphere © {datetime.now().year} celsius narhwal. Thank you kindly for your attention."
 )
 def main(
-    version: bool = typer.Option(
-        None,
-        "--version",
-        is_eager=True,
-        help="View Labosphere's version.",
-        callback=callbacks.version,
-        rich_help_panel="About Labosphere",
-    ),
     license: bool = typer.Option(
         None,
         "--license",
