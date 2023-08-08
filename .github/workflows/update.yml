@@ -2,7 +2,8 @@ name: Update Repository
 
 on:
   schedule:
-    - cron: "0 10,22 * * *"
+    - cron: "55 9 * * *"
+    - cron: "55 21 * * *"
 
   workflow_dispatch:
 
