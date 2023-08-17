@@ -58,20 +58,6 @@ jobs:
       - name: Run Labosphere
         run: poetry run labosphere start --cooldown 1 --timeout 5
 
-      - name: Check for Changes
-        uses: tj-actions/changed-files@v37
-        id: changed-files
-        with:
-          files: cubari.json
-
-      - name: Exit if No Changes
-        if: steps.changed-files.outputs.any_changed != true
-        run: |
-          git push origin -d ${{ env.UPDATE_BRANCH }}
-          gh run cancel ${{ github.run_id }}
-          gh run watch ${{ github.run_id }} > /dev/null 2>&1
-        env:
-          GH_TOKEN: ${{ github.token }}
 
       - name: Commit Changes
         run: |
