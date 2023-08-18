@@ -58,6 +58,12 @@ jobs:
       - name: Run Labosphere
         run: poetry run labosphere start --cooldown 1 --timeout 5
 
+      - name: Exit if No Changes
+        run: |
+          {git diff --quiet --exit-code -- cubari.json && \
+          gh run cancel ${{ github.run_id }} && \
+          gh run watch ${{ github.run_id }};} || \
+          true
 
       - name: Commit Changes
         run: |
