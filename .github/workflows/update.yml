@@ -60,10 +60,12 @@ jobs:
 
       - name: Exit if No Changes
         run: |
-          {git diff --quiet --exit-code -- cubari.json && \
-          gh run cancel ${{ github.run_id }} && \
-          gh run watch ${{ github.run_id }};} || \
-          true
+          if [[ -z $(git diff -- cubari.json) ]]; then
+            gh run cancel ${{ github.run_id }}
+            gh run watch ${{ github.run_id }}
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Commit Changes
         run: |
@@ -74,6 +76,10 @@ jobs:
       - name: Merge Update Branch
         run: |
           gh pr create --title "Update repository" --body ""
-          gh pr merge --squash --delete-branch --auto ${{ env.UPDATE_BRANCH }}
+          gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Delete Update Branch
+        if: ${{ always() }}
+        run: git push -d origin ${{ env.UPDATE_BRANCH }}
