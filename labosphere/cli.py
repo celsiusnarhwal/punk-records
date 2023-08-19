@@ -54,15 +54,19 @@ def start(
 
         new_metadata = {
             "title": title,
-            "groups": {"TCB Scans": [page.get("src") for page in pages]},
+            "groups": {
+                "TCB Scans": [
+                    page.get("src") for page in pages if page.parent.name != "a"
+                ]
+            },
         }
 
-        changes = old_metadata != new_metadata
-
-        if changes:
+        if old_metadata != new_metadata:
             timeout_tracker = 0
-            new_metadata["last_updated"] = int(datetime.utcnow().timestamp())
-            cubari["chapters"][number] = new_metadata
+            cubari["chapters"][number] = {
+                **new_metadata,
+                "last_updated": int(datetime.utcnow().timestamp()),
+            }
             dump_cubari(cubari)
 
             print(

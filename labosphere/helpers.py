@@ -33,6 +33,9 @@ def cubari_path() -> Path:
 
 
 def load_cubari() -> dict:
+    if not cubari_path().exists():
+        json.dump({}, cubari_path().open("w"), indent=4)
+
     cubari = json.load(cubari_path().open())
     cubari.update(BASE_METADATA)
     dump_cubari(cubari)
