@@ -1,19 +1,21 @@
 import os
-import re
 import sys
 import time
 from datetime import datetime
 
 import typer
 from path import Path
+from rich import print
 
 from labosphere import callbacks
 from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
 from labosphere.helpers import (
+    conditional_truncate,
     cubari_path,
     deep_get,
     dump_cubari,
     get_chapter_list,
+    get_chapter_number,
     get_soup,
     load_cubari,
 )
@@ -23,6 +25,23 @@ app = typer.Typer(no_args_is_help=True)
 
 @app.command("start")
 def start(
+    start_from: float = typer.Option(
+        None, "--from", help="The number of the newest chapter to retrieve."
+    ),
+    end_at: float = typer.Option(
+        1, "--to", min=1, help="The number of the oldest chapter to retrieve."
+    ),
+    explicit_chapters: list[float] = typer.Option(
+        ...,
+        "--chapter",
+        "-c",
+        default_factory=list,
+        help="The number of a specific chapter to retrieve. Specify multiple times "
+        "for multiple chapters. If specified, only chapters provided to "
+        "this option will be retrieved. "
+        "Overrides --from and --to.",
+        show_default=False,
+    ),
     cooldown: int = typer.Option(
         0, help="The number of seconds to wait between sending requests to TCB Scans."
     ),
@@ -36,10 +55,39 @@ def start(
     """
     Run Labosphere.
     """
+    chapter_pool = get_chapter_list()
+    latest_chapter = float(get_chapter_number(chapter_pool[0]))
+    start_from = start_from or latest_chapter
+
+    if start_from > latest_chapter:
+        raise typer.BadParameter(
+            f"{conditional_truncate(start_from)} is greater than the latest chapter number "
+            f"({conditional_truncate(latest_chapter)}).",
+            param_hint="--from",
+        )
+    elif start_from < end_at:
+        raise typer.BadParameter(
+            f"--from ({conditional_truncate(start_from)}) is less than --to ({conditional_truncate(end_at)})."
+        )
+
+    if explicit_chapters:
+        chapter_pool = [
+            c for c in chapter_pool if float(get_chapter_number(c)) in explicit_chapters
+        ]
+    else:
+        chapter_pool = [
+            c
+            for c in chapter_pool
+            if start_from >= float(get_chapter_number(c)) >= end_at
+        ]
+
     timeout_tracker = 0
 
-    for chapter in get_chapter_list():
-        number = re.search(r"[\d.]+", chapter.text).group()
+    for chapter in chapter_pool:
+        number = get_chapter_number(chapter)
+
+        if explicit_chapters and float(number) not in explicit_chapters:
+            continue
 
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})

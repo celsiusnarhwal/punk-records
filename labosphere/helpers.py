@@ -1,8 +1,9 @@
 import json
+import re
 from collections import OrderedDict
 
 import requests
-from bs4 import BeautifulSoup, ResultSet
+from bs4 import BeautifulSoup, PageElement, ResultSet
 from dict_deep import deep_get as base_deep_get
 from fake_useragent import UserAgent
 from path import Path
@@ -26,6 +27,14 @@ def get_chapter_list() -> ResultSet:
     return get_soup(BASE_URL / "mangas/5/one-piece").find_all(
         "a", href=lambda href: href and "chapter" in href
     )
+
+
+def get_chapter_number(chapter: PageElement) -> str:
+    return re.search(r"[\d.]+", chapter.text).group()
+
+
+def conditional_truncate(number: float) -> float | int:
+    return int(number) if number.is_integer() else number
 
 
 def cubari_path() -> Path:
