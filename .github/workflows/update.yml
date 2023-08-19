@@ -73,10 +73,16 @@ jobs:
           git commit -m "Update cubari.json"
           git push
 
-      - name: Merge Update Branch
+      - name: Open Pull Request
         run: |
-          gh pr create --title "Update repository" --body ""
-          gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
+          if [[ -z ${{ env.LABOSPHERE_FLAG_PR }} ]]; then
+            gh pr create --title "Update repository" \
+            --body "More chapters updated than expected. Review requested." \ 
+            --assignee @celsiusnarhwal
+          else
+            gh pr create --title "Update repository" --body ""
+            gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
 

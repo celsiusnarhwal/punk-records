@@ -1,3 +1,4 @@
+import os
 import re
 import sys
 import time
@@ -7,7 +8,7 @@ import typer
 from path import Path
 
 from labosphere import callbacks
-from labosphere.constants import BASE_URL, DOCKER
+from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
 from labosphere.helpers import (
     cubari_path,
     deep_get,
@@ -38,10 +39,11 @@ def start(
     timeout_tracker = 0
 
     for chapter in get_chapter_list():
+        number = re.search(r"[\d.]+", chapter.text).group()
+
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})
 
-        number = re.search(r"[\d.]+", chapter.text).group()
         title = chapter.text.splitlines()[2].strip()
 
         soup = get_soup(BASE_URL / chapter.get("href").lstrip("/"))
@@ -89,6 +91,9 @@ def start(
             sys.exit()
 
         time.sleep(cooldown)
+
+    if timeout and GITHUB_ACTIONS:
+        print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
 
     if DOCKER:
         mount = Path("/labosphere")
