@@ -62,7 +62,7 @@ jobs:
         run: |
           if [[ -z $(git diff -- cubari.json) ]]; then
             gh run cancel ${{ github.run_id }}
-            gh run watch ${{ github.run_id }}
+            gh run watch ${{ github.run_id }} > /dev/null 2>&1
           fi
         env:
           GH_TOKEN: ${{ github.token }}
