@@ -85,9 +85,6 @@ def start(
     for chapter in chapter_pool:
         number = get_chapter_number(chapter)
 
-        if explicit_chapters and float(number) not in explicit_chapters:
-            continue
-
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})
 
