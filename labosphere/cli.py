@@ -47,7 +47,7 @@ def start(
     timeout: int = typer.Option(
         None,
         min=1,
-        help="Labosphere will exit after requesting this many consecutive chapters "
+        help="Labosphere will stop retrieval after requesting this many consecutive chapters "
         "with no changes.",
     ),
 ):
