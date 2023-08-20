@@ -5,7 +5,6 @@ from datetime import datetime
 
 import typer
 from path import Path
-from rich import print
 
 from labosphere import callbacks
 from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
