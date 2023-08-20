@@ -132,11 +132,11 @@ def start(
 
         if timeout and timeout_tracker >= timeout:
             print(f"Requested {timeout} consecutive chapters with no changes. Exiting.")
-            sys.exit()
+            break
 
         time.sleep(cooldown)
 
-    if timeout and GITHUB_ACTIONS:
+    if timeout and timeout_tracker >= timeout and GITHUB_ACTIONS:
         print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
 
     if DOCKER:
