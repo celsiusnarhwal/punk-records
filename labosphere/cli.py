@@ -47,7 +47,7 @@ def start(
     timeout: int = typer.Option(
         None,
         min=1,
-        help="Labosphere will stop retrieval after requesting this many consecutive chapters "
+        help="Labosphere will stop after retrieving this many consecutive chapters "
         "with no changes.",
     ),
 ):
@@ -131,7 +131,7 @@ def start(
             )
 
         if timeout and timeout_tracker >= timeout:
-            print(f"Requested {timeout} consecutive chapters with no changes. Exiting.")
+            print(f"Retrieved {timeout} consecutive chapters with no changes. Exiting.")
             break
 
         time.sleep(cooldown)
