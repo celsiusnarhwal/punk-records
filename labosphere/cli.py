@@ -140,9 +140,6 @@ def start(
 
         time.sleep(cooldown)
 
-    if timeout and GITHUB_ACTIONS:
-        print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
-
     if DOCKER:
         mount = Path("/labosphere")
         mount.mkdir_p()
