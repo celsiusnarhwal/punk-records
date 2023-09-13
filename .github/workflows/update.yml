@@ -75,11 +75,15 @@ jobs:
 
       - name: Open Pull Request
         run: |
-          gh pr create --title "Update repository" --body ""
-          gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
+          if [[ -z ${{ env.LABOSPHERE_FLAG_PR }} ]]; then
+            gh pr create --title "Update repository" --body "More chapters updated than expected; review required."
+          else
+            gh pr create --title "Update repository" --body ""
+            gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
 
       - name: Delete Update Branch
-        if: ${{ always() }}
+        if: ${{ always() && env.LABOSPHERE_FLAG_PR != 1 }}
         run: git push -d origin ${{ env.UPDATE_BRANCH }}
