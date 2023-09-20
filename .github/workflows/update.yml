@@ -75,7 +75,7 @@ jobs:
 
       - name: Open Pull Request
         run: |
-          if [[ -z ${{ env.LABOSPHERE_FLAG_PR }} ]]; then
+          if [[ -n "${{ env.LABOSPHERE_FLAG_PR }}" ]]; then
             gh pr create --title "Update repository" --body "More chapters updated than expected; review required."
           else
             gh pr create --title "Update repository" --body ""
