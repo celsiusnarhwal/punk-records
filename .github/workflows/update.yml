@@ -35,12 +35,12 @@ jobs:
           python-version: 3.11
 
       - name: Name Update Branch
+        shell: python
         run: |
           import os
           import uuid
 
           print(f"UPDATE_BRANCH=update/{uuid.uuid4()}", file=open(os.getenv("GITHUB_ENV"), "a"))
-        shell: python
 
       - name: Create Update Branch
         run: |
