@@ -70,13 +70,41 @@ jobs:
       - name: Install Dependencies
         run: poetry install --only main
 
+      - name: Get Labosphere Options
+        id: options
+        shell: python
+        run: |
+          import os
+
+          start_from = os.getenv("START_FROM")
+          end_at = os.getenv("END_AT")
+          cooldown = os.getenv("COOLDOWN")
+          timeout = os.getenv("TIMEOUT")
+
+          options = []
+
+          if start_from:
+              options.append(f"--from {start_from}")
+
+          if end_at:
+              options.append(f"--to {end_at}")
+
+          if cooldown:
+              options.append(f"--cooldown {cooldown}")
+
+          if timeout:
+              options.append(f"--timeout {timeout}")
+
+          print(f"options={' '.join(options)}", file=open(os.getenv("GITHUB_OUTPUT"), "a"))
+        env:
+          START_FROM: ${{ inputs.start_from }}
+          END_AT: ${{ inputs.end_at }}
+          COOLDOWN: ${{ inputs.cooldown }}
+          TIMEOUT: ${{ inputs.timeout }}
+
       - name: Run Labosphere
         run: |
-          poetry run labosphere start \
-          ${{ inputs.start_from != '' && format('--from {0}', inputs.start_from) || '' }} \
-          ${{ inputs.end_at != '' && format('--to {0}', inputs.end_at) || '' }} \
-          ${{ inputs.cooldown != '' && format('--cooldown {0}', inputs.cooldown) || '' }} \
-          ${{ inputs.timeout != '' && format('--timeout {0}', inputs.timeout) || '' }}
+          poetry run labosphere start ${{ steps.options.outputs.options }}
 
       - name: Exit if No Changes
         run: |
