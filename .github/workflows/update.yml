@@ -71,7 +71,7 @@ jobs:
         run: poetry install --only main
 
       - name: Run Labosphere
-        run: poetry run labosphere start ${{ inputs.start_from != '' && '--from' + inputs.start_from }} ${{ inputs.end_at != '' && '--to' + inputs.end_at }} ${{ inputs.cooldown != '' && '--cooldown' + inputs.cooldown }} ${{ inputs.timeout != '' && '--timeout' + inputs.timeout }}
+        run: poetry run labosphere start ${{ inputs.start_from != '' && '--from' inputs.start_from }} ${{ inputs.end_at != '' && '--to' inputs.end_at }} ${{ inputs.cooldown != '' && '--cooldown' inputs.cooldown }} ${{ inputs.timeout != '' && '--timeout' inputs.timeout }}
 
       - name: Exit if No Changes
         run: |
