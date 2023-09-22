@@ -6,6 +6,27 @@ on:
     - cron: "55 21 * * *"
 
   workflow_dispatch:
+    inputs:
+      start_from:
+        description: "The number of the newest chapter to retrieve. Input 0 for the latest chapter."
+        required: true
+        default: 0
+        type: number
+      end_at:
+        description: "The number of the oldest chapter to retrieve."
+        required: true
+        default: 1
+        type: number
+      cooldown:
+        description: "The number of seconds to wait between sending requests to TCB Scans."
+        required: true
+        default: 1
+        type: number
+      timeout:
+        description: "Labosphere will exit after retrieving this many consecutive chapters with no changes."
+        required: true
+        default: 5
+        type: number
 
 permissions:
   contents: write
@@ -56,7 +77,7 @@ jobs:
         run: poetry install --only main
 
       - name: Run Labosphere
-        run: poetry run labosphere start --cooldown 1 --timeout 5
+        run: poetry run labosphere start --from ${{ github.event.inputs.start_from }} --to ${{ github.event.inputs.end_at }} --cooldown ${{ github.event.inputs.cooldown }} --timeout ${{ github.event.inputs.timeout }}
 
       - name: Exit if No Changes
         run: |
