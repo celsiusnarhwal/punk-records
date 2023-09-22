@@ -21,7 +21,7 @@ BASE_METADATA = {
             "title": "About This Repository",
             "groups": {
                 "celsius narhwal": [
-                    "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/blob/main/about.png"
+                    "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
                 ]
             },
         }
