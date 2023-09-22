@@ -16,4 +16,12 @@ BASE_METADATA = {
     "artist": "Eiichiro Oda",
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+    "chapters": {
+        "0": {
+            "title": "About This Repository",
+            "groups": {
+                "celsius narhwal": "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/blob/main/about.png"
+            },
+        }
+    },
 }
