@@ -18,7 +18,7 @@ on:
         default: 1
         type: number
       timeout:
-        description: "Labosphere will exit after retrieving this many consecutive chapters with no changes. Input 0 to disable timeout."
+        description: "Labosphere will exit after retrieving this many consecutive chapters with no changes."
         default: 5
         type: number
 
