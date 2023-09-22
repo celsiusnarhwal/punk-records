@@ -59,6 +59,7 @@ def start(
     chapter_pool = get_chapter_list()
     latest_chapter = float(get_chapter_number(chapter_pool[0]))
     start_from = start_from or latest_chapter
+    timeout = timeout or None
     viz_titles = toml.load((HERE / "titles.toml").open())
 
     if start_from > latest_chapter:
