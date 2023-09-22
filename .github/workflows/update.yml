@@ -15,6 +15,7 @@ on:
         type: number
       cooldown:
         description: "The number of seconds to wait between sending requests to TCB Scans."
+        required: true
         default: 1
         type: number
       timeout:
