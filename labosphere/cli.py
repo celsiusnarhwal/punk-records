@@ -44,11 +44,13 @@ def start(
         show_default=False,
     ),
     cooldown: int = typer.Option(
-        0, help="The number of seconds to wait between sending requests to TCB Scans."
+        0,
+        min=0,
+        help="The number of seconds to wait between sending requests to TCB Scans.",
     ),
     timeout: int = typer.Option(
         None,
-        min=1,
+        min=0,
         help="Labosphere will exit after requesting this many consecutive chapters "
         "with no changes.",
     ),
