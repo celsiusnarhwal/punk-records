@@ -3,12 +3,13 @@ import sys
 import time
 from datetime import datetime
 
+import tomlkit as toml
 import typer
 from path import Path
 from rich import print
 
 from labosphere import callbacks
-from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS
+from labosphere.constants import BASE_URL, DOCKER, GITHUB_ACTIONS, HERE
 from labosphere.helpers import (
     conditional_truncate,
     cubari_path,
@@ -58,6 +59,7 @@ def start(
     chapter_pool = get_chapter_list()
     latest_chapter = float(get_chapter_number(chapter_pool[0]))
     start_from = start_from or latest_chapter
+    viz_titles = toml.load((HERE / "titles.toml").open())
 
     if start_from > latest_chapter:
         raise typer.BadParameter(
@@ -92,7 +94,7 @@ def start(
         cubari = load_cubari()
         cubari["chapters"] = cubari.get("chapters", {})
 
-        title = chapter.text.splitlines()[2].strip()
+        title = chapter.text.splitlines()[2].strip() or viz_titles[number]
 
         soup = get_soup(BASE_URL / chapter.get("href").lstrip("/"))
         pages = soup.find_all(
@@ -105,7 +107,9 @@ def start(
         new_metadata = {
             "title": title,
             "groups": {
-                "TCB Scans": [
+                "VIZ Media"
+                if float(number) < 999
+                else "TCB Scans": [
                     page.get("src") for page in pages if page.parent.name != "a"
                 ]
             },
