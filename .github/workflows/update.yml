@@ -8,18 +8,18 @@ on:
   workflow_dispatch:
     inputs:
       start_from:
-        description: "The number of the newest chapter to retrieve."
+        description: "Start from chapter:"
         type: number
       end_at:
-        description: "The number of the oldest chapter to retrieve."
+        description: "End at chapter:"
         type: number
       cooldown:
-        description: "The number of seconds to wait between sending requests to TCB Scans."
+        description: "Cooldown between requests (in seconds):"
         required: true
         default: 1
         type: number
       timeout:
-        description: "Labosphere will exit after retrieving this many consecutive chapters with no changes."
+        description: "Consecutive unchanged chapters before exiting:"
         type: number
 
 permissions:
