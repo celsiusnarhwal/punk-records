@@ -1,6 +1,8 @@
 # Labosphere
 
-Labosphere generates [Cubari](https://cubari.moe) repositories for [TCB Scans](https://tcbscans.com)' *One Piece* releases.
+Labosphere generates [Cubari](https://cubari.moe) repositories for *One Piece* releases by [VIZ Media](https://viz.com) (chapters 1-998)
+and [TCB Scans](https://tcbscans.com) (chapters 999+).
+
 It retrieves chapter metadata in reverse sequential order, beginning with the latest chapter and ending with Chapter 1.
 It then uses this metadata to compose a JSON file which can be provided to Cubari as-is.
 

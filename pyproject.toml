@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "labosphere"
 version = "1.0.0"
-description = "A Cubari repo generator for TCB Scans' One Piece releases"
+description = "A Cubari repo generator for One Piece"
 authors = ["celsius narhwal <hello@celsiusnarhwal.dev>"]
 readme = "README.md"
 packages = [{ include = "labosphere" }]
