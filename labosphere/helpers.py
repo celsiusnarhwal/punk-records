@@ -1,3 +1,4 @@
+import copy
 import json
 import re
 from collections import OrderedDict
@@ -9,7 +10,27 @@ from fake_useragent import UserAgent
 from path import Path
 from requests import Response
 
-from labosphere.constants import BASE_METADATA, BASE_URL, DEV_MODE, ROOT
+from labosphere.constants import BASE_URL, DEV_MODE, LABOSPHERE_DIR, ROOT
+
+
+def base_metadata() -> dict:
+    return {
+        "title": "One Piece",
+        "description": (LABOSPHERE_DIR / "description.txt").read_text(),
+        "artist": "Eiichiro Oda",
+        "author": "Eiichiro Oda",
+        "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
+        "chapters": {
+            "0": {
+                "title": "About This Repository",
+                "groups": {
+                    "celsius narhwal": [
+                        "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
+                    ]
+                },
+            }
+        },
+    }
 
 
 def request(url) -> Response:
@@ -33,6 +54,15 @@ def get_chapter_number(chapter: PageElement) -> str:
     return re.search(r"[\d.]+", chapter.text).group()
 
 
+def without_keys(d: dict, *keys: str) -> dict:
+    d = copy.deepcopy(d)
+
+    for key in keys:
+        d.pop(key, None)
+
+    return d
+
+
 def conditional_truncate(number: float) -> float | int:
     return int(number) if number.is_integer() else number
 
@@ -46,7 +76,13 @@ def load_cubari() -> dict:
         json.dump({}, cubari_path().open("w"), indent=4)
 
     cubari = json.load(cubari_path().open())
-    cubari.update(BASE_METADATA)
+    cubari.update(without_keys(base_metadata(), "chapters"))
+
+    try:
+        cubari["chapters"].update(base_metadata()["chapters"])
+    except KeyError:
+        cubari["chapters"] = base_metadata()["chapters"]
+
     dump_cubari(cubari)
 
     return json.load(cubari_path().open())
@@ -55,7 +91,8 @@ def load_cubari() -> dict:
 def dump_cubari(data: dict):
     data = OrderedDict(
         sorted(
-            data.items(), key=lambda x: [*BASE_METADATA.keys(), "chapters"].index(x[0])
+            data.items(),
+            key=lambda x: [*base_metadata().keys(), "chapters"].index(x[0]),
         )
     )
 
