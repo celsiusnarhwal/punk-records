@@ -20,6 +20,7 @@ on:
         type: number
       timeout:
         description: "Consecutive unchanged chapters before exiting:"
+        default: 5
         type: number
 
 permissions:
@@ -78,8 +79,8 @@ jobs:
 
           start_from = os.getenv("START_FROM")
           end_at = os.getenv("END_AT")
-          cooldown = os.getenv("COOLDOWN")
-          timeout = os.getenv("TIMEOUT")
+          cooldown = os.getenv("COOLDOWN") or 1
+          timeout = os.getenv("TIMEOUT") or 5
 
           options = []
 
