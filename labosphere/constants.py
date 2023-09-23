@@ -9,5 +9,3 @@ ROOT = LABOSPHERE_DIR.parent
 BASE_URL = URL("https://tcbscans.com")
 GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
 DOCKER = os.getenv("DOCKER")
-
-BASE_METADATA = {}
