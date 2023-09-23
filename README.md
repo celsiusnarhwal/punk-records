@@ -4,11 +4,7 @@ Punk Records is a [Cubari](https://cubari.moe) repository for [TCB Scans](https:
 and its automated maintainer, [Labosphere](labosphere). Read the releases
 at [punkrecords.celsiusnarhwal.dev](https://punkrecords.celsiusnarhwal.dev).
 
-This repository is updated daily at 10:00 UTC and 22:00 UTC and whenever TCB announces a new *One Piece* release in their [Discord server](https://discord.gg/tcbscans).
-
-Chapters 997 and earlier don't currently have titles since TCB only started embedding titles into its website with
-Chapter 998 (thus Labosphere can only retrieve them for Chapters 998 and later).
-Contributions to resolve this are welcome.
+This repository is updated daily around 10:00 UTC and 22:00 UTC.
 
 ## License
 
