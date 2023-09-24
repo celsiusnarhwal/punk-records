@@ -145,14 +145,11 @@ def start(
             print(f"Requested {timeout} consecutive chapters with no changes. Exiting.")
             
             if GITHUB_ACTIONS:
-                break
-            else:
-                sys.exit()
+                print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
+            
+            break
 
         time.sleep(cooldown)
-
-    if timeout and timeout_tracker >= timeout and GITHUB_ACTIONS:
-        print("LABOSPHERE_FLAG_PR=1", file=open(os.getenv("GITHUB_ENV"), "a"))
 
     if DOCKER:
         mount = Path("/labosphere")
