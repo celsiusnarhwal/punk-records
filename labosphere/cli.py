@@ -143,7 +143,11 @@ def start(
 
         if timeout and timeout_tracker >= timeout:
             print(f"Requested {timeout} consecutive chapters with no changes. Exiting.")
-            sys.exit()
+            
+            if GITHUB_ACTIONS:
+                break
+            else:
+                sys.exit()
 
         time.sleep(cooldown)
 
