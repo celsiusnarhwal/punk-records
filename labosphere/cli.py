@@ -154,7 +154,7 @@ def start(
         mount = Path("/labosphere")
         mount.mkdir_p()
         (mount / "cubari.json").write_text(cubari_path().read_text())
-        exit()
+        sys.exit()
 
 
 # noinspection PyUnusedLocal
