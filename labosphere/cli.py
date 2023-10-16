@@ -62,6 +62,7 @@ def start(
     latest_chapter = float(get_chapter_number(chapter_pool[0]))
     start_from = start_from or latest_chapter
     viz_titles = toml.load((LABOSPHERE_DIR / "titles.toml").open())
+    volumes = toml.load((LABOSPHERE_DIR / "volumes.toml").open())
 
     if start_from > latest_chapter:
         raise typer.BadParameter(
@@ -99,6 +100,7 @@ def start(
         chapter_title = (
             chapter.text.splitlines()[2].strip() or viz_titles[chapter_number]
         )
+
         translation_group = "VIZ Media" if float(chapter_number) < 999 else "TCB Scans"
 
         soup = get_soup(BASE_URL / chapter.get("href").lstrip("/"))
@@ -117,6 +119,20 @@ def start(
                 ]
             },
         }
+
+        if float(chapter_number).is_integer():
+            # The volume number is the first key in volumes.toml for which the value is greater than the chapter number
+            # or the last key + 1 if no key matching the previous condition exists.
+            chapter_volume = next(
+                (
+                    vol
+                    for vol, bound in volumes.items()
+                    if bound >= float(chapter_number)
+                ),
+                int(list(volumes.keys())[-1]) + 1,
+            )
+
+            new_metadata["volume"] = chapter_volume
 
         if old_metadata != new_metadata:
             timeout_tracker = 0
@@ -154,7 +170,7 @@ def start(
         mount = Path("/labosphere")
         mount.mkdir_p()
         (mount / "cubari.json").write_text(cubari_path().read_text())
-        sys.exit()
+        exit()
 
 
 # noinspection PyUnusedLocal
