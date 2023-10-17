@@ -101,6 +101,7 @@ def start(
         )
 
         old_metadata = utils.deep_get(cubari, f"chapters.{chapter_number}", default={})
+        old_metadata.pop("last_updated", None)
 
         new_metadata = {
             "title": chapter_title,
