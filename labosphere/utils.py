@@ -50,8 +50,8 @@ def get_chapter_list() -> ResultSet:
     )
 
 
-def get_chapter_number(chapter: PageElement) -> str:
-    return re.search(r"[\d.]+", chapter.text).group()
+def get_chapter_number(chapter: PageElement) -> float:
+    return float(re.search(r"[\d.]+", chapter.text).group())
 
 
 def without_keys(d: dict, *keys: str) -> dict:
@@ -63,7 +63,7 @@ def without_keys(d: dict, *keys: str) -> dict:
     return d
 
 
-def conditional_truncate(number: float) -> float | int:
+def intify(number: float) -> float | int:
     return int(number) if number.is_integer() else number
 
 
