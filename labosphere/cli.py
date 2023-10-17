@@ -123,6 +123,7 @@ def start(
                 new_metadata["volume"] = chapter_volume
 
         if old_metadata != new_metadata:
+            updated_chapters += 1
             timeout_tracker = 0
 
             deep_set(
@@ -143,9 +144,8 @@ def start(
             )
 
         else:
-            updated_chapters += 1
             timeout_tracker += 1
-
+            
             print(
                 f"No changes to Chapter {utils.intify(chapter_number)}: {chapter_title}"
                 if chapter_title
