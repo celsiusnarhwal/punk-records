@@ -90,7 +90,8 @@ def start(
         cubari["chapters"] = cubari.get("chapters", {})
 
         chapter_title = (
-            chapter.text.splitlines()[2].strip() or viz_titles[chapter_number]
+            chapter.text.splitlines()[2].strip()
+            or viz_titles[str(utils.intify(chapter_number))]
         )
 
         translation_group = "VIZ Media" if chapter_number < 999 else "TCB Scans"
