@@ -63,7 +63,7 @@ def without_keys(d: dict, *keys: str) -> dict:
     return d
 
 
-def intify(number: float) -> float | int:
+def truncate(number: float) -> float | int:
     return int(number) if number.is_integer() else number
 
 

@@ -57,13 +57,13 @@ def start(
 
     if start_from > latest_chapter:
         raise typer.BadParameter(
-            f"{utils.intify(start_from)} is greater than the latest chapter number "
-            f"({utils.intify(latest_chapter)}).",
+            f"{utils.truncate(start_from)} is greater than the latest chapter number "
+            f"({utils.truncate(latest_chapter)}).",
             param_hint="--from",
         )
     elif start_from < end_at:
         raise typer.BadParameter(
-            f"--from ({utils.intify(start_from)}) is less than --to ({utils.intify(end_at)})."
+            f"--from ({utils.truncate(start_from)}) is less than --to ({utils.truncate(end_at)})."
         )
 
     if explicit_chapters:
@@ -91,7 +91,7 @@ def start(
 
         chapter_title = (
             chapter.text.splitlines()[2].strip()
-            or viz_titles[str(utils.intify(chapter_number))]
+            or viz_titles[str(utils.truncate(chapter_number))]
         )
 
         translation_group = "VIZ Media" if chapter_number < 999 else "TCB Scans"
@@ -101,7 +101,9 @@ def start(
             "img", src=lambda src: src and "cdn.onepiecechapters.com" in src
         )
 
-        old_metadata = utils.deep_get(cubari, f"chapters.{chapter_number}", default={})
+        old_metadata = utils.deep_get(
+            cubari, f"chapters|{utils.truncate(chapter_number)}", default={}, sep="|"
+        )
 
         new_metadata = {
             "title": chapter_title,
@@ -122,24 +124,25 @@ def start(
             if chapter_volume:
                 new_metadata["volume"] = chapter_volume
 
-        if old_metadata != new_metadata:
+        if utils.without_keys(old_metadata, "last_updated") != new_metadata:
             timeout_tracker = 0
 
             deep_set(
                 cubari,
-                f"chapters.{chapter_number}",
+                f"chapters|{utils.truncate(chapter_number)}",
                 {
                     **new_metadata,
                     "last_updated": int(datetime.utcnow().timestamp()),
                 },
+                sep="|",
             )
 
             utils.dump_cubari(cubari)
 
             print(
-                f"Updated Chapter {utils.intify(chapter_number)}: {chapter_title}"
+                f"Updated Chapter {utils.truncate(chapter_number)}: {chapter_title}"
                 if chapter_title
-                else f"Updated Chapter {utils.intify(chapter_number)}"
+                else f"Updated Chapter {utils.truncate(chapter_number)}"
             )
 
         else:
@@ -147,9 +150,9 @@ def start(
             timeout_tracker += 1
 
             print(
-                f"No changes to Chapter {utils.intify(chapter_number)}: {chapter_title}"
+                f"No changes to Chapter {utils.truncate(chapter_number)}: {chapter_title}"
                 if chapter_title
-                else f"No changes to Chapter {utils.intify(chapter_number)}"
+                else f"No changes to Chapter {utils.truncate(chapter_number)}"
             )
 
         if timeout and timeout_tracker >= timeout:
