@@ -5,6 +5,33 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1102": {
+            "title": "The Life of Kuma",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_012.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_013.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_014.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_015.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_016.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_017.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1102_018.png"
+                ]
+            },
+            "last_updated": 1703175756
+        },
         "1101": {
             "title": "Dear Bonney",
             "groups": {
