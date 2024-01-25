@@ -5,6 +5,25 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1105": {
+            "title": "The Height of Folly",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1105_d_010.png"
+                ]
+            },
+            "last_updated": 1706186261
+        },
         "1104": {
             "title": "Thank you, Daddy",
             "groups": {
