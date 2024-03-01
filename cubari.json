@@ -5,6 +5,27 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1109": {
+            "title": "Termination",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1109t_012.png"
+                ]
+            },
+            "last_updated": 1709295081
+        },
         "1108": {
             "title": "Attention, World!",
             "groups": {
