@@ -128,7 +128,7 @@ jobs:
             gh pr create --title "Update repository" --body "More chapters updated than expected; review required."
           else
             gh pr create --title "Update repository" --body ""
-            gh pr merge --squash --auto ${{ env.UPDATE_BRANCH }}
+            gh pr merge --squash ${{ env.UPDATE_BRANCH }}
           fi
         env:
           GH_TOKEN: ${{ github.token }}
