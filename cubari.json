@@ -1551,8 +1551,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op1053_4_011.png"
                 ]
             },
-            "volume": "104.1 (Road to Laugh Tale)",
-            "last_updated": 1711282239
+            "volume": 104.1,
+            "last_updated": 1711282501
         },
         "1053.3": {
             "title": "Road to Laughtale 3",
@@ -1572,8 +1572,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_tcb_1053.3_011.png"
                 ]
             },
-            "volume": "104.1 (Road to Laugh Tale)",
-            "last_updated": 1711282240
+            "volume": 104.1,
+            "last_updated": 1711282503
         },
         "1053.2": {
             "title": "Road to Laughtale 2",
@@ -1593,8 +1593,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiecetcb_1053.2_011.png"
                 ]
             },
-            "volume": "104.1 (Road to Laugh Tale)",
-            "last_updated": 1711282242
+            "volume": 104.1,
+            "last_updated": 1711282504
         },
         "1053.1": {
             "title": "Road to Laughtale 1",
@@ -1615,8 +1615,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1053.1_015.png"
                 ]
             },
-            "volume": "104.1 (Road to Laugh Tale)",
-            "last_updated": 1711282244
+            "volume": 104.1,
+            "last_updated": 1711282506
         },
         "1053": {
             "title": "The New Emperors",
