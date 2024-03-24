@@ -1,4 +1,5 @@
-# Volume number = last chapter in the volume
+# Mapping of volumes to their final chapters. A chapter's volume, if it has one, is the first key in this mapping
+# whose value is greater than or equal to the chapter's number.
 1 = 8
 2 = 17
 3 = 26

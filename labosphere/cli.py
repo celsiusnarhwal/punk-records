@@ -1,8 +1,8 @@
 import os
 import sys
 import time
-from datetime import datetime
 
+import pendulum
 import tomlkit as toml
 import typer
 from dict_deep import deep_set
@@ -114,18 +114,14 @@ def start(
             },
         }
 
-        if chapter_number.is_integer():
-            # The volume number is the first key in volumes.toml for which the value is greater than or equal to the
-            # chapter number. If no such key exists, neither does a volume.
-            chapter_volume = next(
-                (vol for vol, bound in volumes.items() if bound >= chapter_number), None
-            )
+        # The volume number, if one exists, is the first key in volumes.toml for which the value is
+        # greater than or equal to the chapter number.
+        chapter_volume = next(
+            (vol for vol, bound in volumes.items() if bound >= chapter_number), None
+        )
 
-            if chapter_volume:
-                new_metadata["volume"] = chapter_volume
-        elif 1053.1 <= chapter_number <= 1053.4:
-            # Road to Laugh Tale gets special treatment.
-            new_metadata["volume"] = 104.1
+        if chapter_volume:
+            new_metadata["volume"] = chapter_volume
 
         if utils.without_keys(old_metadata, "last_updated") != new_metadata:
             timeout_tracker = 0
@@ -135,7 +131,7 @@ def start(
                 f"chapters|{utils.truncate(chapter_number)}",
                 {
                     **new_metadata,
-                    "last_updated": int(datetime.utcnow().timestamp()),
+                    "last_updated": int(pendulum.now("UTC").timestamp()),
                 },
                 sep="|",
             )
@@ -176,7 +172,7 @@ def start(
 
 # noinspection PyUnusedLocal
 @app.callback(
-    epilog=f"Labosphere © {datetime.now().year} celsius narhwal. Thank you kindly for your attention."
+    epilog=f"Labosphere © {pendulum.now().year} celsius narhwal. Thank you kindly for your attention."
 )
 def main(
     license: bool = typer.Option(
