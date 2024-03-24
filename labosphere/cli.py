@@ -115,14 +115,17 @@ def start(
         }
 
         if chapter_number.is_integer():
-            # The volume number is the first key in volumes.toml for which the value is greater than the chapter number.
-            # If no such key exists, neither does a volume. Chapters 1053.1 to 1053.4 do not have volumes.
+            # The volume number is the first key in volumes.toml for which the value is greater than or equal to the
+            # chapter number. If no such key exists, neither does a volume.
             chapter_volume = next(
                 (vol for vol, bound in volumes.items() if bound >= chapter_number), None
             )
 
             if chapter_volume:
                 new_metadata["volume"] = chapter_volume
+        elif 1053.1 <= chapter_number <= 1053.4:
+            # Road to Laugh Tale gets special treatment.
+            new_metadata["volume"] = "Road to Laugh Tale"
 
         if utils.without_keys(old_metadata, "last_updated") != new_metadata:
             timeout_tracker = 0
