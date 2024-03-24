@@ -28,6 +28,7 @@ def base_metadata() -> dict:
                         "https://raw.githubusercontent.com/celsiusnarhwal/punk-records/main/about.png"
                     ]
                 },
+                "volume": 0,
             }
         },
     }
