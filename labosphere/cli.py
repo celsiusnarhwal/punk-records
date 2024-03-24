@@ -125,7 +125,7 @@ def start(
                 new_metadata["volume"] = chapter_volume
         elif 1053.1 <= chapter_number <= 1053.4:
             # Road to Laugh Tale gets special treatment.
-            new_metadata["volume"] = "Road to Laugh Tale"
+            new_metadata["volume"] = "104.1 (Road to Laugh Tale)"
 
         if utils.without_keys(old_metadata, "last_updated") != new_metadata:
             timeout_tracker = 0
