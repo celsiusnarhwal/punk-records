@@ -91,7 +91,8 @@ def start(
 
         chapter_title = (
             chapter.text.splitlines()[2].strip()
-            or viz_titles[str(utils.truncate(chapter_number))]
+            or viz_titles.get(str(utils.truncate(chapter_number)))
+            or "TBA"  # This last fallback should *never* actually be reached in practice, but better safe than sorry.
         )
 
         translation_group = "VIZ Media" if chapter_number < 999 else "TCB Scans"
