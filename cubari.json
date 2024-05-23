@@ -5,6 +5,30 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1115": {
+            "title": "Continental Fragments",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_012.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_013.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_014.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1115_cf_015.png"
+                ]
+            },
+            "last_updated": 1716479979
+        },
         "1114": {
             "title": "The Wings of Icarus",
             "groups": {
