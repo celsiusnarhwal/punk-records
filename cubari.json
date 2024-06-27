@@ -5,6 +5,26 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1119": {
+            "title": "Emeth",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1119_e_012.png"
+                ]
+            },
+            "last_updated": 1719490958
+        },
         "1118": {
             "title": "Being Free",
             "groups": {
