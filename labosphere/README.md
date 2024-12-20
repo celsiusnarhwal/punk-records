@@ -8,13 +8,13 @@ It then uses this metadata to compose a JSON file which can be provided to Cubar
 
 The technically inclined are welcome to run Labosphere themselves:
 
-```bash
+```shell
 docker run -rm -v ${PWD}/labosphere:/labosphere ghcr.io/celsiusnarhwal/labosphere:latest
 ```
 
 You can also install Labosphere permanently with [uv](https://docs.astral.sh/uv):
 
-```bash
+```shell
 uv tool install git+https://github.com/celsiusnarhwal/punk-records
 labosphere start
 ```
