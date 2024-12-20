@@ -12,6 +12,7 @@ on:
       - pyproject.toml
       - README.md
       - LICENSE.md
+      - .python-version
 
   workflow_dispatch:
 
