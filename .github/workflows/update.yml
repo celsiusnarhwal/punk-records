@@ -37,26 +37,25 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.12
+      - name: Set Up uv
+        uses: astral-sh/setup-uv@v4
 
       - name: Name Update Branch
-        shell: python
+        shell: uv run --with hachitool python {0}
         run: |
-          import os
           import uuid
-
-          print(f"UPDATE_BRANCH=update/{uuid.uuid4()}", file=open(os.getenv("GITHUB_ENV"), "a"))
+          
+          import hachitool
+          
+          hachitool.set_env(UPDATE_BRANCH=f"update/{uuid.uuid4()}")
 
       - name: Create Update Branch
         run: |
@@ -65,17 +64,16 @@ jobs:
           git push -u origin ${{ env.UPDATE_BRANCH }}
           git branch --set-upstream-to=origin/${{ env.UPDATE_BRANCH }}
 
-      - name: Set Up Poetry
-        run: curl -sSL https://install.python-poetry.org | python - --version=$(cat .poetry-version)
-
       - name: Install Dependencies
-        run: poetry install --only main
+        run: uv sync
 
       - name: Get Labosphere Options
         id: options
-        shell: python
+        shell: uv run --with hachitool python {0}
         run: |
           import os
+          
+          import hachitool
 
           start_from = os.getenv("START_FROM")
           end_at = os.getenv("END_AT")
@@ -95,8 +93,8 @@ jobs:
 
           if timeout:
               options.append(f"--timeout {timeout}")
-
-          print(f"options={' '.join(options)}", file=open(os.getenv("GITHUB_OUTPUT"), "a"))
+          
+          hachitool.set_output(options=' '.join(options))
         env:
           START_FROM: ${{ inputs.start_from }}
           END_AT: ${{ inputs.end_at }}
@@ -104,8 +102,7 @@ jobs:
           TIMEOUT: ${{ inputs.timeout }}
 
       - name: Run Labosphere
-        run: |
-          poetry run labosphere start ${{ steps.options.outputs.options }}
+        run: uv run labosphere start ${{ steps.options.outputs.options }}
 
       - name: Exit if No Changes
         run: |

@@ -1,8 +1,6 @@
 *
 
-!.poetry-version
 !labosphere/
-!poetry.lock
 !pyproject.toml
 !LICENSE.md
 !README.md

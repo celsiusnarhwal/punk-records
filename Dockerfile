@@ -1,14 +1,11 @@
-FROM python:3.11.1
+FROM ghcr.io/astral-sh/uv:0.5-debian
 
-ENV POETRY_HOME=/opt/poetry
-ENV PATH=${POETRY_HOME}/bin:${PATH}
 ENV DOCKER=1
 
-COPY . /app
+COPY . /app/
 
-WORKDIR /app
+WORKDIR /app/
 
-RUN curl -sSL https://install.python-poetry.org | python - --version=$(cat .poetry-version) && \
-    poetry install --only main
+RUN uv sync
 
-ENTRYPOINT ["poetry", "run", "labosphere", "start"]
+ENTRYPOINT ["uv", "run", "labosphere", "start"]
