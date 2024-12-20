@@ -9,16 +9,14 @@ It then uses this metadata to compose a JSON file which can be provided to Cubar
 The technically inclined are welcome to run Labosphere themselves:
 
 ```bash
-docker run -v ${PWD}/labosphere:/labosphere -t ghcr.io/celsiusnarhwal/labosphere:latest
+docker run -rm -v ${PWD}/labosphere:/labosphere ghcr.io/celsiusnarhwal/labosphere:latest
 ```
 
-Or, if you prefer the hard way (Python 3.11 or later and [Poetry](https://python-poetry.org) required):
+You can also install Labosphere permanently with [uv](https://docs.astral.sh/uv):
 
 ```bash
-git clone https://github.com/celsiusnarhwal/punk-records
-cd punk-records/labosphere
-poetry install --only main
-poetry run labosphere start
+uv tool install git+https://github.com/celsiusnarhwal/punk-records
+labosphere start
 ```
 
 Be advised that Labosphere offers no changelogs or version guarantees.
