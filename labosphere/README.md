@@ -12,7 +12,7 @@ The technically inclined are welcome to run Labosphere themselves:
 docker run -rm -v ${PWD}/labosphere:/labosphere ghcr.io/celsiusnarhwal/labosphere:latest
 ```
 
-You can also install Labosphere permanently with [uv](https://docs.astral.sh/uv):
+You can also install Labosphere persistently with [uv](https://docs.astral.sh/uv):
 
 ```shell
 uv tool install git+https://github.com/celsiusnarhwal/punk-records
