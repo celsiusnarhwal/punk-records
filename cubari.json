@@ -5,6 +5,29 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1142": {
+            "title": "The Things I Find Scary",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_012.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_013.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1142_re_014.png"
+                ]
+            },
+            "last_updated": 1741285790
+        },
         "1141": {
             "title": "Older Women",
             "groups": {
