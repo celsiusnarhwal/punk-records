@@ -266,7 +266,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1133_p_016.png"
                 ]
             },
-            "last_updated": 1733505095
+            "volume": "111",
+            "last_updated": 1742687354
         },
         "1132": {
             "title": "Adventure in Elbaf",
@@ -290,7 +291,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1132_adv_015.png"
                 ]
             },
-            "last_updated": 1732946121
+            "volume": "111",
+            "last_updated": 1742687356
         },
         "1131": {
             "title": "Loki of the Realm of the Dead",
@@ -313,7 +315,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1131_loki_014.png"
                 ]
             },
-            "last_updated": 1731129894
+            "volume": "111",
+            "last_updated": 1742687358
         },
         "1130": {
             "title": "The Accursed Prince",
@@ -336,7 +339,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_%201130_r_014.png"
                 ]
             },
-            "last_updated": 1729262849
+            "volume": "111",
+            "last_updated": 1742687359
         },
         "1129": {
             "title": "Living Dolls",
@@ -360,7 +364,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_livingdoll_1129_015.png"
                 ]
             },
-            "last_updated": 1728590244
+            "volume": "111",
+            "last_updated": 1742687361
         },
         "1128": {
             "title": "RPG",
@@ -385,7 +390,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1128rpg_016.png"
                 ]
             },
-            "last_updated": 1728035903
+            "volume": "111",
+            "last_updated": 1742687363
         },
         "1127": {
             "title": "Adventure in the Land of Mystery",
@@ -407,7 +413,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1127m_013.png"
                 ]
             },
-            "last_updated": 1726869496
+            "volume": "111",
+            "last_updated": 1742687365
         },
         "1126": {
             "title": "Taking Responsibility",
@@ -431,7 +438,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Response_015.png"
                 ]
             },
-            "last_updated": 1726136719
+            "volume": "111",
+            "last_updated": 1742687366
         },
         "1125": {
             "title": "What Constitutes Death",
@@ -456,7 +464,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1125_d_016.png"
                 ]
             },
-            "last_updated": 1725553588
+            "volume": "111",
+            "last_updated": 1742687368
         },
         "1124": {
             "title": "Best Friend",
@@ -476,32 +485,16 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1124_bf_011.png"
                 ]
             },
-            "last_updated": 1724348989
+            "volume": "111",
+            "last_updated": 1742687369
         },
         "1123": {
             "title": "The Void Fortnight",
             "groups": {
-                "TCB Scans": [
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_001.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_01.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_002.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_003.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_004.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_005.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_006.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_007.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_008.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_009.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_010.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_011.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_012.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_013.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_014.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_015.png",
-                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/onepiece_1023_void_016.png"
-                ]
+                "TCB Scans": []
             },
-            "last_updated": 1723779575
+            "volume": "111",
+            "last_updated": 1742687371
         },
         "1122": {
             "title": "The Time Is at Hand",
@@ -524,7 +517,8 @@
                     "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1122_time_014.png"
                 ]
             },
-            "last_updated": 1722593684
+            "volume": "111",
+            "last_updated": 1742687373
         },
         "1121": {
             "title": "The Ebb and Flow of the Ages",
