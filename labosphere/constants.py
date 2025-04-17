@@ -6,6 +6,6 @@ from yarl import URL
 DEV_MODE = os.getenv("DEV_MODE")
 LABOSPHERE_DIR = Path(__file__).parent
 ROOT = LABOSPHERE_DIR.parent
-BASE_URL = URL("https://tcbscans.me")
+BASE_URL = URL("https://tcbonepiecechapters.com")
 GITHUB_ACTIONS = os.getenv("GITHUB_ACTIONS") == "true"
 DOCKER = os.getenv("DOCKER")
