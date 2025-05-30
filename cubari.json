@@ -5,6 +5,26 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1150": {
+            "title": "Domi Reversi",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/Onepiece_1150_on_011.png"
+                ]
+            },
+            "last_updated": 1748579848
+        },
         "1149": {
             "title": "One Second",
             "groups": {
