@@ -5,6 +5,27 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1151": {
+            "title": "\"That's enough! I've got this!\"",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_007.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1151_t_012.png"
+                ]
+            },
+            "last_updated": 1749160674
+        },
         "1150": {
             "title": "Domi Reversi",
             "groups": {
