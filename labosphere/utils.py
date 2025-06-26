@@ -47,7 +47,7 @@ def get_soup(url: str) -> BeautifulSoup:
 
 def get_chapter_list() -> ResultSet:
     return get_soup(BASE_URL / "mangas/5/one-piece").find_all(
-        "a", href=lambda href: href and "chapter" in href
+        "a", href=lambda href: href and href.startswith("/chapters/")
     )
 
 

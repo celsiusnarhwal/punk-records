@@ -50,7 +50,7 @@ def start(
     Run Labosphere.
     """
     chapter_pool = utils.get_chapter_list()
-    latest_chapter = float(utils.get_chapter_number(chapter_pool[0]))
+    latest_chapter = utils.get_chapter_number(chapter_pool[0])
     start_from = start_from or latest_chapter
     viz_titles = toml.load((LABOSPHERE_DIR / "titles.toml").open())
     volumes = toml.load((LABOSPHERE_DIR / "volumes.toml").open())
