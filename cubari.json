@@ -5,6 +5,26 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1175": {
+            "title": "Nidhogg*",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_002.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_008.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_009.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_010.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_011.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_003.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_004.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_005.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_006.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1175_nnn_007.png"
+                ]
+            },
+            "last_updated": 1772229566
+        },
         "1174": {
             "title": "The Strongest in the World",
             "groups": {
