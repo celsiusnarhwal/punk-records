@@ -1,0 +1,16 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  keepalive:
+    name: Keep Alive
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v7
+
+      - name: Keep Alive
+        uses: gautamkrishnar/keepalive-workflow@v2
