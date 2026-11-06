@@ -13,11 +13,7 @@ jobs:
     permissions:
       actions: write
     steps:
-      - name: Get Workflow File Name
-        id: file
-        run: echo "file=$(echo ${{ github.workflow_file_path }} | awk -F / '{print $1}')" >> ${GITHUB_OUTPUT}
-
       - name: Keep Alive
-        run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/${{ steps.file.outputs.file }}/enable
+        run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/keepalive.yml/enable
         env:
           GH_TOKEN: ${{ github.token }}
