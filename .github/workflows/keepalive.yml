@@ -19,5 +19,5 @@ jobs:
 
       - name: Keep Alive
         run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/${{ steps.file.outputs.file }}/enable
-        with:
+        env:
           GH_TOKEN: ${{ github.token }}
