@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Get Workflow File Name
         id: file
-        run: echo "file=$(echo ${{ github.workflow_file_path }} | awk -F / '{print $1'})" >> ${GITHUB OUTPUT}
+        run: echo "file=$(echo ${{ github.workflow_file_path }} | awk -F / '{print $1}')" >> ${GITHUB OUTPUT}
 
       - name: Keep Alive
         uses: gh api -X PUT repos/${{ github.repository }}/actions/workflows/${{ steps.file.outputs.file }}/enable
