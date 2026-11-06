@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "0 0 * * *"
 
+  workflow_dispatch:
+
 jobs:
   keepalive:
     name: Keep Alive
@@ -11,8 +13,11 @@ jobs:
     permissions:
       actions: write
     steps:
-      - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v7
+      - name: Get Workflow File Name
+        id: file
+        run: echo "file=$(echo ${{ github.workflow_file_path }} | awk -F / '{print $1'})" >> ${GITHUB OUTPUT}
 
       - name: Keep Alive
-        uses: gautamkrishnar/keepalive-workflow@v2
+        uses: gh api -X PUT repos/${{ github.repository }}/actions/workflows/${{ steps.file.outputs.file }}/enable
+        with:
+          GH_TOKEN: ${{ github.token }}
