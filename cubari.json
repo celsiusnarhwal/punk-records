@@ -5,6 +5,27 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1199": {
+            "title": "TBD",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_02_03.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_04.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_05.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_06.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_07.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_08.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_09.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_10.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_11.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_12.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1199_r_13.png"
+                ]
+            },
+            "last_updated": 1795113708
+        },
         "1198": {
             "title": "The Island of Monsters",
             "groups": {
