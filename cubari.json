@@ -5,6 +5,31 @@
     "author": "Eiichiro Oda",
     "cover": "https://cdn.myanimelist.net/images/manga/2/253146.jpg",
     "chapters": {
+        "1200": {
+            "title": "Lili\u2019s Letter",
+            "groups": {
+                "TCB Scans": [
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_01.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_001.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_02.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_03.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_04-05.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_06.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_07.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_08.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_09.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_10.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_11.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_12.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_13.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_14.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_15.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_16.png",
+                    "https://cdn.onepiecechapters.com/file/CDN-M-A-N/op_1200_m_17.png"
+                ]
+            },
+            "last_updated": 1795751392
+        },
         "1199": {
             "title": "Passed Down Through the Generations",
             "groups": {
